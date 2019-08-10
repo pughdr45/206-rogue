@@ -14,12 +14,13 @@ body {
   	}
 
 .container{
-	max-width: 375px;
+	max-width: 1200px;
+	width: 90%
 	margin: 0 auto;
 	display: flex;
   	justify-content: center;
 	align-items: center;
-	flex-wrap: wrap;
+	flex-flow: row wrap;
 	}
 
 h1,
@@ -55,15 +56,18 @@ header {
 	border-bottom: .1875em solid #77a466;
 	margin: 0 auto;
 	display: flex;
-  	justify-content: center;
+	justify-content: center;
   	align-items: center;
   	flex-wrap: wrap;
 	}
 
 header h1 {
 	/*float: left;*/
+	width: 100%;
+	height: 100px;
 	margin: 0;
-	padding: 2.375em 0;
+	text-align: center;
+	/*padding: 2.375em 0;*/
 }
 header h1 span {
 	color: #77a466;
@@ -71,18 +75,24 @@ header h1 span {
 
 header nav {
 	/*float: right;*/
-	padding: 2.875em 0;
+	/*padding: 2.875em 0;*/
+	width: 100%;
+
 }
 header nav ul {
 	margin: 0;
 	padding: 0;
 }
 header nav ul li {
+	display: flex;
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: .875em;
-	padding: 0 .625em;
-	/*display: inline;*/
+	padding: 1em .625em;
+	list-style-type: none;
+	justify-content: center;
+
+	
 }
 header nav ul li a{
 	text-decoration: none;
@@ -92,6 +102,8 @@ header nav ul li a{
 /*The widths are in a percentage!*/
 .top-section,
 .bottom-section {
+	display: flex;
+	width: 100%;
 	margin: 0 auto;
 	flex-wrap: wrap;
 	display: flex;
@@ -112,6 +124,7 @@ header nav ul li a{
 .main-title {
 	height: auto;
 	/*float: left;}*/
+}
 .main-title h3 {
 	text-align: left;
 	padding: .3125em 0;
@@ -126,10 +139,13 @@ header nav ul li a{
 .section-one,
 .section-two,
 .section-three {
-	width: 33%;
+	display: flex;
+	width: 100%;
 	height: auto;
-	/*float: left;*/
-	border-top: 1px solid #eee;
+	border:solid;
+	border-top-right-radius: 2px 2px 2px;
+		/*float: left;*/
+	/*border-top: 1px solid #eee;*/
 }
 
 .section-one h4 {
@@ -137,8 +153,8 @@ header nav ul li a{
 }
 
 .section-two {
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
+	/*border-left: 1px solid #eee;
+	border-right: 1px solid #eee;*/
 }
 
 .section-two h4,
@@ -151,7 +167,7 @@ header nav ul li a{
 	padding: 0;
 }
 .menu li {
-	padding: .625em 0;
+	/*padding: .625em 0;*/
 	color:#77a466;
 }
 
@@ -182,4 +198,37 @@ footer span {
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: .875em;
+}
+
+/*Breakpoints*/
+@media all and (min-width:768px) {
+    /* Tablet styles here */
+ 
+	
+	.bottom-section {
+		flex-wrap: nowrap;
+		align-items: flex-start;
+
+	}
+
+	.section-one {
+		flex-wrap: wrap;
+	}
+
+	.section-two {
+		flex-wrap: wrap;
+	}
+
+	.section-three {
+		flex-wrap: wrap;
+	}
+
+}
+ 
+@media all and (min-width:1200px) {
+    /* Desktop styles here */
+  header nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
 }
