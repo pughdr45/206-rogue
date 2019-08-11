@@ -15,7 +15,7 @@ body {
 
 .container{
 	max-width: 1200px;
-	width: 90%;
+	width: 90%
 	margin: 0 auto;
 	display: flex;
   	justify-content: center;
@@ -47,57 +47,49 @@ h4 {
 p {
 	font-size: .875em;
 	line-height: 1.3125em;
-   /* padding: 0 1.875em;*/
+    padding: 0 1.875em;
 }
 
 /*The widths are in a percentage!*/
 header {
-	
+	/*height: 6.875em;*/
 	border-bottom: .1875em solid #77a466;
-	/*margin: 0 auto;*/
-	width:100%;
+	margin: 0 auto;
 	display: flex;
-	flex-flow: column nowrap;
-	justify-content: center;
-	text-align: center;
+  	justify-content: center;
+  	align-items: center;
+  	/*flex-wrap: wrap;*/
 	}
 
 header h1 {
 	/*float: left;*/
 	width: 100%;
-	height: auto;
+	height: 100px;
 	margin: 0;
-	border-bottom: .125em solid #77a466;
+	text-align: center;
+	/*padding: 2.375em 0;*/
 }
-
 header h1 span {
 	color: #77a466;
 }
-
-
 
 header nav {
 	/*float: right;*/
 	/*padding: 2.875em 0;*/
 	width: 100%;
-
-
-
+	/*text-align: flex-end;*/
 }
 header nav ul {
 	margin: 0;
 	padding: 0;
 }
 header nav ul li {
-	
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: .875em;
-	padding: 1em .625em;
+	padding: 0 .625em;
 	list-style-type: none;
-	
-
-	
+	display: inline;
 }
 header nav ul li a{
 	text-decoration: none;
@@ -144,23 +136,27 @@ header nav ul li a{
 .section-one,
 .section-two,
 .section-three {
+	display: flex;
 	width: 100%;
 	height: auto;
-	border-top: 1px solid #eee;
+	border:solid;
+	border-top-right-radius: 2px 2px 2px;
+		/*float: left;*/
+	/*border-top: 1px solid #eee;*/
 }
 
 .section-one h4 {
-	
+	padding: .625em 0;
 }
 
 .section-two {
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
+	/*border-left: 1px solid #eee;
+	border-right: 1px solid #eee;*/
 }
 
 .section-two h4,
 .section-three h4 {
-	/*padding: .625em 1.875em;*/
+	padding: .625em 1.875em;
 }
 
 .menu {
@@ -185,12 +181,12 @@ header nav ul li a{
 
 /*The widths are in a percentage!*/
 footer {
-	width:100%;
 	height: 3.12em;
 	border-top: .1875em solid #eee;
 	margin: 0 auto;
+	clear: both;
 	text-align: center;
-	/*display: flex;*/
+	display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -199,40 +195,4 @@ footer span {
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: .875em;
-}
-
-/*Breakpoints*/
-@media all and (min-width:768px) {
-    /* Tablet styles here */
- 
-	
-	.bottom-section {
-		flex-wrap: nowrap;
-		align-items: flex-start;
-
-	}
-
-	.section-one {
-		flex-wrap: wrap;
-	}
-
-	.section-two {
-		flex-wrap: wrap;
-
-	}
-
-	.section-three {
-		flex-wrap: wrap;
-	}
-
-}
- 
-@media all and (min-width:1200px) {
-    /* Desktop styles here */
-  header{flex-flow: row nowrap
-  }
-  header nav ul {
-    display: flex;
-    justify-content: space-between;
-  }
 }
